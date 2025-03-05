@@ -3,10 +3,10 @@ function reviewCode() {
     const feedback = document.getElementById('feedback');
     let result = '';
 
-    // Basic checks: Missing semicolons, unused variables, etc.
+    
     const errors = [];
 
-    // Check for missing semicolons
+    
     if (!code.includes(';')) {
         errors.push('It seems like you forgot semicolons at the end of some lines.');
     }
@@ -24,12 +24,12 @@ function reviewCode() {
         });
     }
 
-    // Check for basic syntax errors (rudimentary example)
+    
     if (code.includes('==') && !code.includes('===')) {
         errors.push('Consider using "===" instead of "==" for strict comparison.');
     }
 
-    // Provide feedback based on detected issues
+    
     if (errors.length > 0) {
         result = errors.join('<br>');
     } else {
